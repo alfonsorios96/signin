@@ -95,19 +95,122 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+footer {
+    display: block;
+    background-color: rgba(148, 148, 148, 0.5);
+    margin-top: 100px;
+    height: 70px;
+}
 
+.container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+}
 
+.item {
+    display: flex;
+}
 
+.login {
+    background-color: rgba(159, 252, 233, 0.7);
+}
 
+.signin {
+    background-color: rgba(148, 252, 152, 0.7);
+}
 
+.form-input {
+    border: 2px solid #66afe9;
+    border-radius: 25px;
+    width: 420px;
+    padding: 6px 12px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.container-button .button {
+    margin: auto;
+    border-top: 1px solid #96d1f8;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    padding: 7px 14px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 24px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
 
+.container-button .button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+}
 
+.container-button .button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
 
+.form-input label {
+    font-size: 1em;
+}
 
+.form-input input {
+    display: block;
+    width: 90%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
 
+.form-input input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
 
+.form-input span {
+    /*
+    display: none; !important;
+     */
+    color: red;
+    font-size: small;
+}
 
 
 
