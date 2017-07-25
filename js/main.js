@@ -13,6 +13,10 @@
             this.email = email;
         }
 
+        /**
+         * @description Gets and boolean if an username is blocked.
+         * @returns {boolean} true if the user is blocked.
+         */
         isBlockedUser() {
             let foundUser = false;
             blockedUsers.forEach((user) => {
@@ -98,8 +102,21 @@
             if(user.isBlockedUser()) {
                 toastr.error('El usuario está bloqueado.','Servidor');
             } else {
-                if (user.existUser()){
-
+                if (!user.isBlockedUser()){
+                    switch(user.validSession()){
+                        case 1:
+                            toastr.success('Inicio de sesión correcta', 'Servidor');
+                            break;
+                        case 2:
+                            toastr.warning('La constraeña no coincide.','Servidor');
+                            break;
+                        case 3:
+                            toastr.warning('El usuario es incorrecto.','Servidor');
+                            break;
+                        case 0:
+                            toastr.warning('El usuario y contraseña son incorrectas.','Servidor');
+                            break;
+                    }
                 } else {
                     toastr.warning('El usuario está bloqueado.','Servidor');
                 }
@@ -135,6 +152,7 @@
                 });
             })
             .catch(error => {
+                console.log(error);
                 toastr.warning('No se pudo cargar los usuarios bloqueados','Servidor remoto');
             });
     };
